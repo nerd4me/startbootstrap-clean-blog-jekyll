@@ -17,6 +17,10 @@ email_username:  yondy.chow@gmail.com
 
 # Build settings
 markdown: kramdown
+
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
 highlighter: rouge
 permalink: pretty
 paginate: 5

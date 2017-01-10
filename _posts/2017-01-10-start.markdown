@@ -4,6 +4,7 @@ title:      "GitHub + Jekyll个人博客搭建"
 subtitle:   "本博客搭建过程"
 date:       2017-01-10 22:45:00 +0800
 author:     "Nerd4me"
+catalog:    true
 ---
 
 这个博客模板是从[IronSummitMedia/startbootstrap-clean-blog-jekyll](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)  fork 的。首先感谢作者，

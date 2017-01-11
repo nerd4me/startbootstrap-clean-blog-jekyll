@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Guava指南"
+title:      "Guava指南（未完）"
 subtitle:   "Guava Tutorial「译」"
 date:       2017-01-11 20:19:00 +0800
 author:     "Nerd4me"

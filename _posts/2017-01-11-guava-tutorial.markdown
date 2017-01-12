@@ -5,8 +5,7 @@ subtitle:   "Guava Tutorial「译」"
 date:       2017-01-11 20:19:00 +0800
 author:     "Nerd4me"
 catalog:    true
-tags:
-    - guava
+tags:       [guava]
 ---
 
 ## 介绍
@@ -39,13 +38,12 @@ public class GuavaTester {
         return a + b;
     }
 }
-
-/*
- * 程序运行结果：
- * Exception in thread "main" java.lang.NullPointerException
- *  at GuavaTester.sum(GuavaTester.java:13)
- *  at GuavaTester.main(GuavaTester.java:9)
- */
+```
+程序运行结果：
+```java
+ Exception in thread "main" java.lang.NullPointerException
+   at GuavaTester.sum(GuavaTester.java:13)
+   at GuavaTester.main(GuavaTester.java:9)
 ```
 
 上述代码存在的问题：
@@ -72,18 +70,16 @@ public class GuavaTester {
         return a.get() + b.get();
     }
 }
-
-/*
- * 程序运行结果：
- * Exception in thread "main" java.lang.NullPointerException
- *   at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:210)
- *   at com.google.common.base.Optional.of(Optional.java:85)
- *   at GuavaTester.main(GuavaTester.java:8)
- */
+```
+程序运行结果：
+```java
+ Exception in thread "main" java.lang.NullPointerException
+    at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:210)
+    at com.google.common.base.Optional.of(Optional.java:85)
+    at GuavaTester.main(GuavaTester.java:8)
 ```
 
-上述程序中重要的概念如下：
-
+上述程序中重要的概念如下:
 - Optional Guava提供的工具类，帮助我们在代码中正确的使用`null`。
 - Optional.of 返回将要做为函数参数的Optional类实例，它将检查传入的参数，不能为`null`。
 - Optional.get 获取保存在Optional实例中的参数值。
@@ -93,12 +89,14 @@ public class GuavaTester {
 ## Optional
 
 #### 类定义
+
 如下是`com.google.common.base.Optional<T>`的类定义：
+
 ```java
 @GwtCompatible(serializable=true)
 public abstract class Optional<T>
    extends Object
-      implements Serializable
+      implements Serializable {  }
 ```
 
 #### 类方法

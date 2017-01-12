@@ -22,7 +22,8 @@ Guava是Google开发的一款基于Java的开源工具库，它被广泛用于Go
 - ***验证*** 标准化故障安全验证机制
 - ***最佳实践*** 强调最佳实践
 
-考虑如下代码片段。
+考虑如下代码片段:
+
 ```java
 public class GuavaTester {
     public static void main(String[] args) {
@@ -39,7 +40,9 @@ public class GuavaTester {
     }
 }
 ```
+
 程序运行结果：
+
 ```java
  Exception in thread "main" java.lang.NullPointerException
    at GuavaTester.sum(GuavaTester.java:13)
@@ -47,6 +50,7 @@ public class GuavaTester {
 ```
 
 上述代码存在的问题：
+
 - sum()函数不对任何传入的有可能为空的参数做空值校验
 - 调用方法也未对传入函数的变量做空值校验
 - 程序运行时抛出`NullPointerException`
@@ -71,7 +75,9 @@ public class GuavaTester {
     }
 }
 ```
+
 程序运行结果：
+
 ```java
  Exception in thread "main" java.lang.NullPointerException
     at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:210)
@@ -80,6 +86,7 @@ public class GuavaTester {
 ```
 
 上述程序中重要的概念如下:
+
 - Optional Guava提供的工具类，帮助我们在代码中正确的使用`null`。
 - Optional.of 返回将要做为函数参数的Optional类实例，它将检查传入的参数，不能为`null`。
 - Optional.get 获取保存在Optional实例中的参数值。

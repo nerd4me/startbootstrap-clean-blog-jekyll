@@ -108,7 +108,20 @@ public abstract class Optional<T>
 
 #### 类方法
 
-|Sr.No| Method & Description                                            |
-|:----|:----------------------------------------------------------------|
-|1    | `static <T> Optional<T>  absent()`<br />*返回一个不包含值的Optional对象引用.*                                      |
-|2    | `abstract Set<T> asSet()`<br />*返回一个只包含当前对象代表元素的不可变单例`Set`，如果没有，则返回空`Set`..*                                      |
+具体可参考[Guava API](http://google.github.io/guava/releases/snapshot/api/docs/)，直接上栗子：
+
+```java
+import com.google.common.base.Optional;
+
+public class GuavaTester {
+    public static void main(String[] args) {
+
+    }
+
+    public static Integer sum(Optional<Integer> a, Optional<Integer> b) {
+        // Optional.isPresent - 检查值是否存在
+        System.out.println("First parameter is present: " + a.isPresent());
+        System.out.println("Second parameter is present: " + b.isPresent());
+    }
+}
+```
